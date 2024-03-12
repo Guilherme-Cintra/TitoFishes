@@ -1,0 +1,181 @@
+* {
+    font-family: 'Roboto';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+}
+/* Nav */
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    height: 10vh;
+}
+.logo{
+    font-weight: 700;
+    color: black;
+}
+.navbar a{
+    position: relative;
+    font-size: 18px;
+    color: black;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+.navbar a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: black;
+    transition: .3s;
+}
+.navbar a:hover::before{
+    
+    width: 100%;
+  
+}
+
+
+/* Footer */
+footer {
+    display: flex;
+    height: 5vh;
+    width: 100vw;
+    background-color: #fff;
+    /* left: 0; */
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+
+}
+
+footer p{
+    text-align: center;
+    margin: 0;
+}
+
+/* Home Page */
+
+.welcome-container{
+    background-image: url('/img/beta.jpg');
+    background-size: cover; 
+    background-position: center; 
+    height: 80vh;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.discover-container{
+    color: #fff;
+    text-align: center;
+
+}
+
+.fishes-btn {
+    padding: 10px 40px; 
+    background-color: #fff; 
+    color: #000; 
+    text-decoration: none; 
+    border-radius: 5px; 
+}
+
+.fishes-btn:hover {
+    padding: 20px 50px; 
+    background-color: #000; 
+    color: #fff; 
+    transition: .3s;
+    font-size: 20px;
+}
+
+
+/* Fishes store */
+
+.text-container {
+    height: 10vh;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+.text-container h1{
+   margin: 0;
+}
+
+.imgs-container {
+    margin: 0;
+    display: grid;
+    height: 60vh;
+    grid-gap: 20px;
+    padding: 20px;
+    align-items: start;
+    grid-template-rows: 300px 300px 300px; 
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+.box{
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border: 1px solid #ccc; 
+    min-height: 100%;
+
+   
+}
+.box:hover{
+    font-size: 20px;
+    transition: .3s;
+}
+
+#box1{
+    background-image: url('/img/nemo.webp');
+    grid-column: 1/2;
+    grid-row: 1/2 ;
+}
+#box2{
+    background-image: url('/img/beta_branco.webp');
+    grid-column: 2/3;
+    grid-row: 2/3 ;
+}
+#box3{
+    background-image: url('/img/betarosa.webp');
+    grid-column: 3/4;
+    grid-row: 1/4 ;
+}
+#box4{
+    background-image: url('/img/beta.jpg');
+}
+#box5{
+    background-image: url('/img/betaroxo.webp');
+    grid-column: 1/2;
+    grid-row: 2/3 ;
+}
+#box6{
+    background-image: url('/img/carpas.jpeg');
+    grid-column: 1/3;
+    grid-row: 3/4 ;
+}
+/* #box2, #box3, #box4, #box5, #box6 {
+    grid-column: span 1;
+    grid-row: span 1;
+ } */
