@@ -25,6 +25,7 @@ Route::post('/addfish', [ FishController::class,'store']);
 Route::get('/find/{id}', [ FishController::class,'findById']);
 Route::delete('/delete/{id}', [ FishController::class,'delete']);
 Route::put('/update/{id}', [ FishController::class,'update']);
+Route::get('/category/{id}', [ FishController::class,'getByCategory']);
 
 //Categories
 Route::post('/category/create', [CategoryController::class, 'post']);

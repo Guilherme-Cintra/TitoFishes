@@ -18,7 +18,7 @@ class Fish extends Model
     protected $fillable = ['name', 'description', 'price', 'stock', 'category', 'species', 'image'];
 
     public function categories(){
-        return $this->belongsToMany(Category::class, 'table_fish_category');
+        return $this->belongsToMany(Category::class, 'table_fish_category', 'fish_id', 'category_id');
     }
 
     protected static function booted()

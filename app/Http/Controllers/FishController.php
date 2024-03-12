@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Models\Fish;
 use Exception;
@@ -98,6 +99,23 @@ class FishController extends Controller {
             return response()->json([
                 'error'=>$e->getMessage(),
                 'message'=>'fish with id: ' . strval($id) . ' not found.'
+            ], 404);
+        }
+    }
+
+    public function getByCategory($cat){
+        try{
+        $category = Category::findOrFail($cat);
+        
+        $fishes = $category->fishes;
+        return response()->json([
+            'fishes' => $fishes
+        ], 200);
+        }
+        catch(ModelNotFoundException $e){
+            return response()->json([
+                'error'=> $e->getMessage(),
+                'message'=>'Category not found'
             ], 404);
         }
     }

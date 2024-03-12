@@ -14,7 +14,7 @@ class Category extends Model
     protected $fillable = ['name'];
 
     public function fishes(){
-        return $this->belongsToMany(Fish::class, 'table_fish_category');
+        return $this->belongsToMany(Fish::class, 'table_fish_category','category_id', 'fish_id');
     }
 
 }
